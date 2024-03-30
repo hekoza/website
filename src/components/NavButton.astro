@@ -1,0 +1,10 @@
+---
+const { url, page } = Astro.props;
+---
+
+<li class="nav-button">
+    <div class="nav-link-container">
+        <a href={ url }>{ page }</a>
+        <slot name="dropmenu"/>
+    </div>
+</li>

@@ -1,0 +1,30 @@
+// Colors
+$body-text-color: #ffffff;
+$accent-color-primary: #f64a4a;
+$accent-color-primary-dark: #bb2d3b;
+$accent-color-secondary: #116d75;
+
+$body-background: #211D24;
+$body-link-color: $accent-color-primary;
+$body-link-hover: #ffffff;
+
+$header-background: #6aa390;
+$header-link-color: #ffffff;
+$header-link-color-transparent: #ffffff00;
+$header-link-hover: $accent-color-primary;
+$header-menu-items-mobile: #ff7a69;
+$header-menu-items-mobile-transparent: #ff7a6900;
+$header-menu: #000000;
+$header-menu-tranpsarent: #00000000;
+$header-menu-hover: $accent-color-secondary;
+
+$title-bar-background: #ffffff;
+$title-bar-text: $accent-color-secondary;
+
+$footer-background: #000000;
+
+$link-anim-duration: .3s;
+$button-anim-duration: .15s;
+
+// Images
+$header-image: url('../images/background.png');

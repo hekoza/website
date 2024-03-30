@@ -1,0 +1,12 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageTitle from '../layouts/PageTitle.astro';
+import '../styles/style.scss'
+---
+
+<Layout pageType="404" title="404 - Page Not Found">
+	<PageTitle name="after-header" title="404 - Page not found"/>
+	<main>
+		<a href="javascript:history.back()">Go back</a>
+	</main>
+</Layout>

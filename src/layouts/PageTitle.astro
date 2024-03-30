@@ -1,0 +1,11 @@
+---
+import TitleBar from '../components/TitleBar.astro';
+import '../styles/titlebar.scss';
+
+const { title } = Astro.props;
+---
+
+<div class="titlebar-container">
+	<TitleBar title={title}/>
+	<slot />
+</div>

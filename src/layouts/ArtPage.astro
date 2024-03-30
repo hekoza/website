@@ -1,0 +1,20 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageTitle from '../layouts/PageTitle.astro';
+import SubTitleBar from '../components/SubTitleBar.astro'
+import ImageGallery from '../components/ImageGallery.astro';
+import '../styles/style.scss'
+
+const { tabtitle, pagetitle, pages } = Astro.props;
+---
+
+<Layout pageType="art-page-main" title={tabtitle}>
+	<PageTitle name="after-header" title={pagetitle}/>
+    <SubTitleBar pages={pages} />
+    
+	<main>
+		<ImageGallery>
+            <slot />
+		</ImageGallery>
+	</main>
+</Layout>

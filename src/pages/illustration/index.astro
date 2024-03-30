@@ -1,0 +1,23 @@
+---
+import ArtPage from '../../layouts/ArtPage.astro';
+
+import { pages } from '../../scripts/illpages.js'
+---
+
+<ArtPage tabtitle="Illustration - HE Koza" pagetitle="Illustration" pages={pages}>
+	<div id="lightgallery">
+		<a href="https://cdn.discordapp.com/attachments/835784691004866583/1215420911327518761/peregrine_falcon.png?ex=65fcafee&is=65ea3aee&hm=bf1d830804237f9727c41c15d3c4197735202f4302ef842e7db6e40f857fde5d&">
+			<div class="img-container">
+				<img class="gallery-img" alt="First Falcon" src="https://cdn.discordapp.com/attachments/835784691004866583/1215421214126903377/falcon_icon.png?ex=65fcb036&is=65ea3b36&hm=189777cbf6f9a5e9ece34fe3bf7194a61da5b5ae8575c00a16fee3583e7df18b&" />	
+				<div class="gallery-img-overlay">Hi</div>
+			</div>
+		</a>
+		
+		<a href="https://cdn.discordapp.com/attachments/835784691004866583/1215420911327518761/peregrine_falcon.png?ex=65fcafee&is=65ea3aee&hm=bf1d830804237f9727c41c15d3c4197735202f4302ef842e7db6e40f857fde5d&">
+			<div class="img-container">
+				<img class="gallery-img" alt="Second Falcon" src="https://cdn.discordapp.com/attachments/835784691004866583/1215421214126903377/falcon_icon.png?ex=65fcb036&is=65ea3b36&hm=189777cbf6f9a5e9ece34fe3bf7194a61da5b5ae8575c00a16fee3583e7df18b&" />
+				<div class="gallery-img-overlay"></div>
+			</div>
+		</a>
+	</div>
+</ArtPage>

@@ -1,0 +1,15 @@
+---
+import NavDropButton from "./NavDropButton.astro";
+import '../styles/dropdownmenu.scss';
+
+const { id } = Astro.props;
+---
+
+<div class="dropdown">
+    <NavDropButton id={ id } />
+    <div id={ id } class="dropdown-items">
+        <slot />
+     </div>
+</div>
+
+<script src="../scripts/dropdownmenu.js"></script>

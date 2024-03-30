@@ -1,0 +1,41 @@
+---
+import MobileMenu from '../components/MobileMenu.astro';
+import NavButton from './NavButton.astro';
+import NavDropdown from './NavDropdown.astro';
+
+import { pages as illpages } from '../scripts/illpages.js'
+import { pages as animpages } from '../scripts/animpages.js'
+---
+
+<MobileMenu />
+<nav class="nav-bar">
+	<div class="nav-overlay">
+	</div>
+	<div class="nav-container">
+		<ul class="nav-buttons">
+			<NavButton url="/" page="Home" />
+			<NavButton url="/illustration" page="Illustration">
+				<NavDropdown id="ill" slot="dropmenu">
+					{
+						illpages?.map(page => (
+							<a href={page.url} class="sub-title-link">{page.title}</a>
+						))
+					}
+				</NavDropdown>
+			</NavButton>
+			<NavButton url="/animation" page="Animation">
+				<NavDropdown id="anim" slot="dropmenu">
+					{
+						animpages?.map(page => (
+							<a href={page.url} class="sub-title-link">{page.title}</a>
+						))
+					}
+				</NavDropdown>
+			</NavButton>
+			<NavButton url="/about" page="About" />
+		</ul>
+	</div>
+</nav>
+<script>
+	import "../scripts/navigation.js";
+</script>

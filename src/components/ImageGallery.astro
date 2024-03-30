@@ -1,0 +1,16 @@
+---
+import "../styles/imagegallery.scss"
+import 'lightgallery/scss/lightgallery-bundle.scss';
+---
+
+<div class="image-gallery-container">
+    <div class="image-gallery-justify-center">
+        <div class="gallery-justify">
+            <slot />
+        </div>
+    </div>
+</div>
+
+<script>
+    import "../scripts/imagegallery.js";
+</script>

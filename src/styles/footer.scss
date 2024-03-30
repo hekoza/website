@@ -1,0 +1,11 @@
+@use 'theme';
+
+.footer {
+    height: 3rem;
+    background-color: theme.$footer-background;
+}
+
+.footer-container {
+    max-width: 140ch;
+    margin: 0 auto;
+}

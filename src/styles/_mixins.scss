@@ -1,0 +1,20 @@
+@mixin anim-transition($length) {
+    -webkit-transition: $length ease-in-out;
+    -moz-transition: $length ease-in-out;
+    -o-transition: $length ease-in-out;
+    transition: $length ease-in-out;
+}
+
+@mixin rotate-element($deg) {
+    -webkit-transform: rotate($deg);
+    -moz-transform: rotate($deg);
+    -o-transform: rotate($deg);
+    transform: rotate($deg);
+}
+
+@mixin anim-menu-drop($speed) {
+    -webkit-transition: top $speed ease-in-out .05s, visibility $speed ease-in-out, background-color $speed ease-in-out;
+    -moz-transition: top $speed ease-in-out .05s, visibility $speed ease-in-out, background-color $speed ease-in-out;
+    -o-transition: top $speed ease-in-out .05s, visibility $speed ease-in-out, background-color $speed ease-in-out;
+    transition: top $speed ease-in-out .05s, visibility $speed ease-in-out, background-color $speed ease-in-out;
+}

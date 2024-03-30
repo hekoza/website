@@ -1,0 +1,19 @@
+---
+import { Image } from 'astro:assets';
+import Navigation from '../components/Navigation.astro';
+import SiteLogo from '../images/logo.png';
+import '../styles/navigation.scss';
+
+const { pageType } = Astro.props;
+---
+
+<header id={pageType}>
+	<div class="header-container">
+		<div class="header-logo">
+			<a href="/">
+				<Image src={SiteLogo} alt="Logo" class="header-logo-img" />
+			</a>
+		</div>
+		<Navigation />
+	</div>
+</header>

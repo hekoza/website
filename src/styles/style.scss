@@ -1,0 +1,68 @@
+@use 'mixins';
+@use 'theme';
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('/fonts/JosefinSans-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('/fonts/JosefinSans-Italic-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('/fonts/Raleway-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('/fonts/Raleway-Italic-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+html {
+    background-color: theme.$body-background;
+    font-family: 'Josefin Sans', system-ui, sans-serif;
+}
+
+body {
+    margin: auto;
+    color: theme.$body-text-color;
+}
+
+main {
+    margin: auto;
+    padding: 1.5rem;
+    max-width: 140ch;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    font-family: "Josefin Sans", sans-serif;
+    font-variant: small-caps;
+    margin: 0;
+}
+
+a {
+    color: theme.$body-link-color;
+    text-decoration: none;
+    @include mixins.anim-transition(theme.$link-anim-duration);
+}
+
+a:hover {
+    color: theme.$body-link-hover;
+}

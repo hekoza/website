@@ -1,0 +1,18 @@
+---
+import '../styles/subtitlebar.scss'
+const pathname = new URL(Astro.request.url).pathname;
+
+const { pages } = Astro.props;
+---
+
+<ul class="sub-title-bar">
+    {
+        pages?.map(page => (
+            <a href={page.url} class="sub-title-link">
+                <li class={pathname === page.url ? "sub-title-item active" : "sub-title-item"}>
+                    <h2>{page.title}</h2>
+                </li>
+            </a>
+        ))
+    }
+</ul>
