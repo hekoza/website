@@ -1,6 +1,6 @@
-const dropdownButton1 = document.getElementById('ill-button');
+const dropdownButton1 = document.getElementById('con-button');
 const dropdownButton2 = document.getElementById('anim-button');
-const dropdownMenu1 = document.getElementById('ill');
+const dropdownMenu1 = document.getElementById('con');
 const dropdownMenu2 = document.getElementById('anim');
 
 dropdownButton1.addEventListener('click', () => {

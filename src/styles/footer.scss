@@ -1,11 +1,41 @@
 @use 'theme';
 
 .footer {
-    height: 3rem;
     background-color: theme.$footer-background;
+    display: block;
+    padding: 5px;
 }
 
 .footer-container {
+    height: 4.5rem;
     max-width: 140ch;
     margin: 0 auto;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 0px;
+}
+
+.footer-content {
+    .footer-content-item {
+        display: flex;
+        position: relative;
+        left: -5px;
+    }
+
+    .footer-content-button {
+        display: flex;
+        padding: 2px;
+
+        a {
+            width: 17px;
+            height: 17px;
+            padding: 3px;
+            color: theme.$body-text-color;
+        }
+
+        a:hover {
+            color: theme.$accent-color-primary;
+        }
+    }
 }

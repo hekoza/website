@@ -1,11 +1,20 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import PageTitle from '../layouts/PageTitle.astro';
+import { Image } from 'astro:assets';
+import portrait from '../images/about/image00.jpg';
+import {Content as AboutText} from '../markdown/about.md';
 import '../styles/style.scss'
 ---
 
 <Layout pageType="about" title="About - HE Koza">
 	<PageTitle name="after-header" title="About"/>
 	<main>
+		<div class="about-content">
+			<div class="about-image">
+				<!-- <Image src={portrait} alt="A photo of Koza." style="max-width: 400px; height: auto;" /> -->
+			</div>
+			<div class="about-text"><AboutText /></div>
+		</div>
 	</main>
 </Layout>
