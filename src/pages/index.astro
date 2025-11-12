@@ -1,10 +1,12 @@
 ﻿---
 import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import indexImage from '../images/index/ryebarley.png';
 import '../styles/style.scss'
 ---
 
 <Layout pageType="home" title="Home - HE Koza">
 	<main>
-		
+		<Image src={indexImage} alt="A photo of Koza." style="max-width: 800px; height: auto;" />
 	</main>
 </Layout>
