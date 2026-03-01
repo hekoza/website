@@ -290,3 +290,10 @@ nav {
         }
     }
 }
+
+@media only screen and (min-width: 2000px) {
+    .header-container {
+        width: 80vw;
+        max-width: 180ch;
+    }
+}

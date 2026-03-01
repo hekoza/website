@@ -2,6 +2,6 @@ Hannah Koza is an artist from East Tennessee. She is currently studying animatio
 
 Koza's art is shaped by her affinity for the natural world. She is deeply inspired by astrophysics, wildlife, the fantastical, and the unknown.
 
-Outside of art, Koza is also studying computer science and loves birds of prey, longboarding, astronomy, playing bass guitar, and learning about new things.
+Outside of art, Koza is also studying computer science and loves birds of prey, longboarding, astronomy, and playing bass guitar.
 
-**hekoza@gmail.com**
+Contact: **hekoza<!-- -->@gmail.com**
