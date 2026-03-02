@@ -12,8 +12,8 @@ import { pages as conpages } from '../scripts/conpages.js'
 	</div>
 	<div class="nav-container">
 		<ul class="nav-buttons">
-			<NavButton url="/website/" page="Home" />
-			<NavButton url="/website/conceptart/characterdesign" page="Concept Art">
+			<NavButton url="/" page="Home" />
+			<NavButton url="/conceptart/characterdesign" page="Concept Art">
 				<NavDropdown id="con" slot="dropmenu">
 					{
 						conpages?.map(page => (
@@ -22,8 +22,8 @@ import { pages as conpages } from '../scripts/conpages.js'
 					}
 				</NavDropdown>
 			</NavButton>
-			<NavButton url="/website/animation" page="Animation" />
-			<NavButton url="/website/about" page="About" />
+			<NavButton url="/animation" page="Animation" />
+			<NavButton url="/about" page="About" />
 		</ul>
 	</div>
 </nav>
