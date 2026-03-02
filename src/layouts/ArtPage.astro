@@ -3,9 +3,30 @@ import Layout from '../layouts/Layout.astro';
 import PageTitle from '../layouts/PageTitle.astro';
 import SubTitleBar from '../components/SubTitleBar.astro'
 import ImageGallery from '../components/ImageGallery.astro';
+import { Image } from 'astro:assets';
 import '../styles/style.scss'
 
-const { tabtitle, pagetitle, pages } = Astro.props;
+const { tabtitle, pagetitle, pages, imagepath } = Astro.props;
+var images;
+
+switch (imagepath) {
+	case 'characterdesign':
+		images = import.meta.glob<{ default: ImageMetadata }>(
+			"../images/conceptart/characterdesign/*.{jpg,jpeg,png,webp}",
+		);
+		break;
+	case 'creaturedesign':
+		images = import.meta.glob<{ default: ImageMetadata }>(
+			"../images/conceptart/creaturedesign/*.{jpg,jpeg,png,webp}",
+		);
+		break;
+	case 'animation':
+		images = import.meta.glob<{ default: ImageMetadata }>(
+			"../images/conceptart/creaturedesign/*.{jpg,jpeg,png,webp}",
+		);
+		break;
+}
+
 ---
 
 <Layout pageType="art-page-main" title={tabtitle}>
@@ -14,7 +35,31 @@ const { tabtitle, pagetitle, pages } = Astro.props;
     
 	<main>
 		<ImageGallery>
-            <slot />
+            <div id="lightgallery">
+				{
+					Object.entries(images).map(async ([_path, image], index) => {
+						const { default: imageData } = await image();
+						return (
+							<a
+								style={`--width: ${imageData.width}; --height: ${imageData.height};`}
+								href={imageData.src}
+								target="_blank"
+							>
+								<div class="img-container">
+									<Image
+										class="gallery-img"
+										format="webp"
+										src={imageData}
+										alt={imageData.src}
+										loading={index < 4 ? "eager" : "lazy"}
+									/>
+									<div class="gallery-img-overlay"></div>
+								</div>
+							</a>
+						);
+					})
+				}
+    		</div>
 		</ImageGallery>
 	</main>
 </Layout>

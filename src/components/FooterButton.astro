@@ -1,0 +1,11 @@
+---
+const { url } = Astro.props;
+---
+
+<div class="footer-content-item">
+    <div class="footer-content-button">
+        <a href={url}>
+            <slot>
+        </a>
+    </div>
+</div>

@@ -3,7 +3,6 @@ import MobileMenu from '../components/MobileMenu.astro';
 import NavButton from './NavButton.astro';
 import NavDropdown from './NavDropdown.astro';
 
-import { pages as illpages } from '../scripts/illpages.js'
 import { pages as conpages } from '../scripts/conpages.js'
 import { pages as animpages } from '../scripts/animpages.js'
 ---
@@ -15,7 +14,7 @@ import { pages as animpages } from '../scripts/animpages.js'
 	<div class="nav-container">
 		<ul class="nav-buttons">
 			<NavButton url="/" page="Home" />
-			<NavButton url="/conceptart" page="Concept Art">
+			<NavButton url="/conceptart/characterdesign" page="Concept Art">
 				<NavDropdown id="con" slot="dropmenu">
 					{
 						conpages?.map(page => (
@@ -24,15 +23,7 @@ import { pages as animpages } from '../scripts/animpages.js'
 					}
 				</NavDropdown>
 			</NavButton>
-			<NavButton url="/animation" page="Animation">
-				<NavDropdown id="anim" slot="dropmenu">
-					{
-						animpages?.map(page => (
-							<a href={page.url} class="sub-title-link">{page.title}</a>
-						))
-					}
-				</NavDropdown>
-			</NavButton>
+			<NavButton url="/animation" page="Animation" />
 			<NavButton url="/about" page="About" />
 		</ul>
 	</div>

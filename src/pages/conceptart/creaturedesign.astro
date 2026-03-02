@@ -1,36 +1,7 @@
 ---
 import ArtPage from '../../layouts/ArtPage.astro';
-import { Image } from 'astro:assets';
 
 import { pages } from '../../scripts/conpages.js'
-const images = import.meta.glob<{ default: ImageMetadata }>(
-  "../../images/conceptart/creaturedesign/*.{jpg,jpeg,png,webp}",
-);
 ---
 
-<ArtPage tabtitle="Creature Design - HE Koza" pagetitle="Concept Art" pages={pages}>
-    <div id="lightgallery">
-        {
-      Object.entries(images).map(async ([_path, image], index) => {
-        const { default: imageData } = await image();
-        return (
-          <a
-            style={`--width: ${imageData.width}; --height: ${imageData.height};`}
-            href={imageData.src}
-            target="_blank"
-            data-fancybox="gallery"
-          >
-            <div class="img-container">
-            <Image
-              format="webp"
-              src={imageData}
-              alt=""
-              loading={index < 20 ? "eager" : "lazy"}
-            />
-            </div>
-          </a>
-        );
-      })
-    }
-    </div>
-</ArtPage>
+<ArtPage tabtitle="Creature Design - HE Koza" pagetitle="Concept Art" pages={pages} imagepath='creaturedesign' />

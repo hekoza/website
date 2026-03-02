@@ -12,7 +12,7 @@
     overflow: hidden;
     margin: 0 auto;
     /* --padding: max(2vw, 18px); */
-    --space: max(2vw, 18px);
+    --space: max(1.5vw, 18px);
     --min-height: clamp(296px, 21vw, 600px);
 
     padding: var(--padding);
@@ -91,4 +91,10 @@
 
 .gallery-img-overlay:hover {
     background: #00000050;
+}
+
+@media only screen and (min-width: 2000px) {
+    #lightgallery {
+        --space: max(1vw, 18px);
+    }
 }
