@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import PageTitle from '../layouts/PageTitle.astro';
 import SubTitleBar from '../components/SubTitleBar.astro'
 import ImageGallery from '../components/ImageGallery.astro';
-import { Image } from 'astro:assets';
+import { Picture } from 'astro:assets';
 import '../styles/style.scss'
 
 const { tabtitle, pagetitle, pages, imagepath } = Astro.props;
@@ -46,9 +46,11 @@ switch (imagepath) {
 								target="_blank"
 							>
 								<div class="img-container">
-									<Image
+									<Picture
 										class="gallery-img"
+										formats={["avif", "webp"]}
 										src={imageData}
+										height = {500}
 										alt={imageData.src}
 										loading={index < 4 ? "eager" : "lazy"}
 									/>
