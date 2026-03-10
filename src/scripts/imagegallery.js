@@ -9,6 +9,8 @@ lightGallery(document.getElementById('lightgallery'), {
     licenseKey: '0000-0000-000-0000',
     speed: 500,
     thumbnail: true,
+    thumbHeight: "50px",
+    thumbWidth: 70,
     download: false,
     zoomFromOrigin: false,
     hideScrollbar: true,

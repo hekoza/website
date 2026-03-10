@@ -1,3 +1,4 @@
+@use 'theme';
 /*.image-gallery-container {
     max-width: 140ch;
 }*/
@@ -49,6 +50,14 @@
     -moz-animation: fadeIn 0.75s;
     -o-animation: fadeIn 0.75s;
     -ms-animation: fadeIn 0.75s;
+}
+
+.lg-thumb-item {
+    border-color: theme.$accent-color-secondary !important;
+}
+
+.lg-outer .lg-thumb-item.active, .lg-outer .lg-thumb-item:hover {
+  border-color: theme.$header-background !important;
 }
 
 @keyframes fadeIn {
