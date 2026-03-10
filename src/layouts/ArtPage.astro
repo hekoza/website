@@ -12,17 +12,17 @@ var images;
 switch (imagepath) {
 	case 'characterdesign':
 		images = import.meta.glob<{ default: ImageMetadata }>(
-			"../images/conceptart/characterdesign/*.{jpg,jpeg,png,webp}",
+			"../images/conceptart/characterdesign/*.{gif,jpg,jpeg,png,webp}",
 		);
 		break;
 	case 'creaturedesign':
 		images = import.meta.glob<{ default: ImageMetadata }>(
-			"../images/conceptart/creaturedesign/*.{jpg,jpeg,png,webp}",
+			"../images/conceptart/creaturedesign/*.{gif,jpg,jpeg,png,webp}",
 		);
 		break;
 	case 'animation':
 		images = import.meta.glob<{ default: ImageMetadata }>(
-			"../images/animation/*.{jpg,jpeg,png,webp}",
+			"../images/animation/*.{gif,jpg,jpeg,png,webp}",
 		);
 		break;
 }
