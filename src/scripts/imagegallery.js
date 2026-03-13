@@ -12,6 +12,7 @@ lightGallery(document.getElementById('lightgallery'), {
     thumbHeight: "50px",
     thumbWidth: 70,
     download: false,
+    getCaptionFromTitleOrAlt: false,
     zoomFromOrigin: false,
     hideScrollbar: true,
     counter: false,
